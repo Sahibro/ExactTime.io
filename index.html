@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExactTime.io | Global Atomic Time</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;900&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #050505; font-family: 'Inter', sans-serif; color: #fff; overflow: hidden; }
+        .gold-glow { text-shadow: 0 0 30px rgba(212, 175, 55, 0.4); color: #D4AF37; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
+    </style>
+</head>
+<body class="flex items-center justify-center h-screen">
+
+    <div class="text-center w-full max-w-4xl px-4">
+        <header class="mb-12">
+            <h1 class="text-sm tracking-[0.5em] uppercase text-gray-500 mb-2">Global Precision</h1>
+            <div id="city-name" class="text-3xl font-light italic">Your Local Time</div>
+        </header>
+
+        <main>
+            <!-- Big Clock -->
+            <div id="clock" class="text-[12vw] font-black leading-none tracking-tighter gold-glow mb-4">
+                00:00:00
+            </div>
+            
+            <!-- Accuracy Indicator -->
+            <div class="glass py-3 px-6 rounded-full inline-block">
+                <p class="text-xs tracking-widest text-gray-400">
+                    <span class="w-2 h-2 bg-green-500 rounded-full inline-block mr-2 animate-pulse"></span>
+                    SYNCED WITH ATOMIC CLOCK: <span id="offset" class="text-white">-0.002s</span>
+                </p>
+            </div>
+        </main>
+
+        <footer class="mt-24 grid grid-cols-3 gap-4 text-[10px] tracking-widest text-gray-600 uppercase">
+            <div>Accuracy: 99.9%</div>
+            <div>Server: Global-Edge</div>
+            <div>Status: Secure</div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
